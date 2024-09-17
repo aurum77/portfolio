@@ -4,12 +4,12 @@ import Footer from "./components/footer";
 
 const Root = () => {
   return (
-    <>
+    <div className="flex flex-col items-center h-screen w-full bg-gruvbox-dark text-gruvbox-foreground">
+    { /* need to fix background color not fully filling up in some cases */}
       <Header />
-      <div>Name Surname</div>
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 
