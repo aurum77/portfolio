@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
-const root = () => {
+const Root = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ const root = () => {
   );
 };
 
-export default root;
+export default Root;
