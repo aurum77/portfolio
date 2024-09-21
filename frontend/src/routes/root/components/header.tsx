@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex gap-6 ml-auto">
           <a href="#">Projects</a>
           <a href="#">Blog</a>
-          <a href="#">Contact</a>
+          <a href="#">About</a>
         </div>
       </nav>
     </header>
