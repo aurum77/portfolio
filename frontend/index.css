@@ -4,6 +4,22 @@
 
 @layer base {
     html {
-        font-family: "Noto Sans Mono", sans-serif;
+        font-family: "Cascadia Code", sans-serif;
+    }
+
+    h1 {
+        @apply text-4xl font-bold text-catppuccin-green mb-2 mt-4
+    }
+
+    h2 {
+        @apply text-3xl font-bold text-catppuccin-mauve md:mx-2 mx-1 mb-2 mt-4
+    }
+
+    h3 {
+        @apply text-2xl font-bold text-catppuccin-maroon md:mx-4 mx-2 mb-2 mt-4
+    }
+
+    p {
+        @apply text-base md:mx-8 mx-4 mb-4
     }
 }
