@@ -4,9 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'gruvbox-dark': '#282828',
-        'gruvbox-foreground': '#fbf1c7',
-        'gruvbox-yellow': '#fabd2f'
+        'catppuccin-base': '#1e1e2e',
+        'catppuccin-text': '#cdd6f4',
+        'catppuccin-sapphire': '#b4befe',
+        'catppuccin-green': '#a6e3a1',
+        'catppuccin-mauve': '#cba6f7',
+        'catppuccin-maroon': '#eba0ac'
       }
     },
   },
