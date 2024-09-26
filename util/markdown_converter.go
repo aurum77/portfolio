@@ -6,7 +6,7 @@ import (
 	"github.com/gomarkdown/markdown/parser"
 )
 
-func markdownToHTML(md []byte) []byte {
+func MarkdownToHTML(md []byte) []byte {
 	extensions := parser.CommonExtensions | parser.AutoHeadingIDs | parser.NoEmptyLineBeforeBlock
 	p := parser.NewWithExtensions(extensions)
 	doc := p.Parse(md)
