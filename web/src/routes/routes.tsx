@@ -3,7 +3,7 @@ import Root from "./root/root";
 import Home from "./home";
 import Error from "./error";
 import About from "./about";
-import Blog from "./blog";
+import Blog, { blogLoader } from "./blog";
 import Projects from "./projects";
 import Post, { postLoader } from "./post";
 
@@ -24,6 +24,7 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+        loader: blogLoader
       },
       {
         path: "/blog/:postId",
