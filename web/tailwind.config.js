@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'catppuccin-base': '#1e1e2e',
-        'catppuccin-text': '#cdd6f4',
-        'catppuccin-sapphire': '#b4befe',
-        'catppuccin-green': '#a6e3a1',
-        'catppuccin-mauve': '#cba6f7',
-        'catppuccin-maroon': '#eba0ac'
+        'gruvbox-base': '#282828',
+        'gruvbox-fg': '#ebdbb2',
+        'gruvbox-yellow': '#fabd2f',
+        'gruvbox-blue': '#83a598',
+        'gruvbox-purple': '#d3869b',
+        'gruvbox-aqua': '#8ec07c'
       }
     },
   },
