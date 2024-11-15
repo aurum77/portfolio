@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path"
 	"portfolio/util"
 
 	"github.com/gofiber/fiber/v2"
@@ -16,7 +17,9 @@ func main() {
 		AllowOrigins: "http://localhost:5173",
 	}))
 
-	app.Get("/api", func(c *fiber.Ctx) error {
+	app.Get("/api/blog/", func(c *fiber.Ctx) error {
+		var posts []string
+
 		// open the file
 		cwd, err := os.Getwd()
 
@@ -25,11 +28,36 @@ func main() {
 			return err
 		}
 
-		data, err := os.ReadFile(cwd + "/markdown/markdown_test.md")
+		md_path := path.Join(cwd, "/markdown")
+
+		dirs, err := os.ReadDir(md_path)
+
+		for _, dir := range dirs {
+			posts = append(posts, dir.Name())
+		}
 
 		if err != nil {
 			fmt.Println(err)
 			return err
+		}
+    fmt.Println(posts)
+
+		return c.JSON(posts)
+	})
+
+	app.Get("/api/blog/:id", func(c *fiber.Ctx) error {
+		// open the file
+		cwd, err := os.Getwd()
+
+		if err != nil {
+			fmt.Println(err)
+			return err
+		}
+
+		data, err := os.ReadFile(cwd + c.Params("id"))
+
+		if err == nil {
+      return c.Status(fiber.ErrNotFound.Code).SendString(err.Error())
 		}
 
 		fmt.Println(string(data))
@@ -42,7 +70,7 @@ func main() {
 	})
 
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://127.0.0.1:7567/",
+		AllowOrigins: "*",
 	}))
 
 	// Serve static files
