@@ -5,7 +5,7 @@ const Header = () => {
     <header className="w-full max-w-3xl p-4">
       {/* need to determine what to do in case of mobile */}
       <nav className="flex flex-row justify-center items-center w-full">
-        <Link to="/" className="font-bold text-catppuccin-sapphire">
+        <Link to="/" className="font-bold text-gruvbox-yellow">
           Name Surname
         </Link>
         <ul className="flex gap-6 ml-auto">

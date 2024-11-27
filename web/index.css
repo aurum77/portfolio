@@ -20,6 +20,6 @@
   }
 
   p {
-    @apply text-base md:mx-8 mx-4 mb-4;
+    @apply text-gruvbox-base md:mx-8 mx-4 mb-4;
   }
 }
