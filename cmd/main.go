@@ -83,9 +83,9 @@ func main() {
 	}))
 
 	// Serve static files
-	app.Static("/", "./web/dist")
+	app.Static("/", "./dist")
 	// Catch all route
-	app.Static("*", "./web/dist/index.html")
+	app.Static("*", "./dist/index.html")
 
 	app.Listen(":7567")
 }
