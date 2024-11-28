@@ -11,6 +11,9 @@
 
 ```bash
 docker build -t portfolio .
+# on linux
+docker run -v ./markdown:/app/markdown/ -p 80:80 portfolio
+# on windows
 docker run -v .\markdown:/app/markdown/ -p 80:80 portfolio
 ```
 
