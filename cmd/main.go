@@ -87,5 +87,5 @@ func main() {
 	// Catch all route
 	app.Static("*", "./dist/index.html")
 
-	app.Listen(":7567")
+	app.Listen(":80")
 }

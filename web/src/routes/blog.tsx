@@ -1,7 +1,7 @@
 import { Link, LoaderFunction, useLoaderData } from "react-router-dom";
 
 export const blogLoader: LoaderFunction = async () => {
-  const data = await fetch(`http://127.0.0.1:7567/api/blog`).then(
+  const data = await fetch(`http://127.0.0.1/api/blog`).then(
     (response) => response,
   );
   return data;
