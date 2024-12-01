@@ -29,3 +29,6 @@ tmp/
 
 # web build files
 dist/
+
+# air config file
+.air.toml/
