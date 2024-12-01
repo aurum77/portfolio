@@ -31,4 +31,4 @@ tmp/
 dist/
 
 # air config file
-.air.toml/
+.air.toml
