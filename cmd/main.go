@@ -18,6 +18,10 @@ func main() {
 		AllowOrigins: "http://localhost:5173",
 	}))
 
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*",
+	}))
+
 	app.Get("/api/blog/", func(c *fiber.Ctx) error {
 		posts := []string{}
 
@@ -77,10 +81,6 @@ func main() {
 
 		return c.SendString(string(html))
 	})
-
-	app.Use(cors.New(cors.Config{
-		AllowOrigins: "*",
-	}))
 
 	// Serve static files
 	app.Static("/", "./dist")
