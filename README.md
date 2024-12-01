@@ -11,10 +11,7 @@
 
 ```bash
 docker build -t portfolio .
-# on linux
-docker run -v ./markdown:/app/markdown/ -p 80:80 portfolio
-# on windows
-docker run -v .\markdown:/app/markdown/ -p 80:80 portfolio
+docker run -p 80:8080 -p 8080:8080 -v ./markdown:/app/markdown/ portfolio
 ```
 
 # TODO
