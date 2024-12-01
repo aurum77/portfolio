@@ -26,3 +26,6 @@ go.work.sum
 
 # air tmp binary folder
 tmp/
+
+# web build files
+dist/
