@@ -1,8 +1,9 @@
 import DOMPurify from "dompurify";
 import { LoaderFunction, useLoaderData } from "react-router-dom";
+import { BACKEND_URI } from "../config";
 
 export const postLoader: LoaderFunction = async ({ params }) => {
-  const post = await fetch(`http://127.0.0.1/api/blog/${params.postId}`).then(
+  const post = await fetch(`${BACKEND_URI}/api/blog/${params.postId}`).then(
     (response) => response,
   );
 
