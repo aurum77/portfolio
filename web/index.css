@@ -17,14 +17,14 @@
   }
 
   h2 {
-    @apply text-3xl font-bold text-gruvbox-purple md:mx-2 mx-1 mb-2 mt-4;
+    @apply text-3xl font-bold text-gruvbox-purple mb-2 mt-4;
   }
 
   h3 {
-    @apply text-2xl font-bold text-gruvbox-aqua md:mx-4 mx-2 mb-2 mt-4;
+    @apply text-2xl font-bold text-gruvbox-aqua mb-2 mt-4;
   }
 
   p {
-    @apply text-gruvbox-fg md:mx-8 mx-4 mb-4;
+    @apply text-gruvbox-fg;
   }
 }
