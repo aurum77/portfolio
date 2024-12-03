@@ -1,4 +1,4 @@
-import { createFileRoute, Link, Outlet } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { BACKEND_URI } from "../config";
 
 export const Route = createFileRoute('/blog')({
@@ -24,7 +24,7 @@ function Blog() {
         data.map((postId) => {
           return (
             <li>
-              <Link to={`/post/${postId}`}>{postId}</Link>
+              <Link key={postId} to={`/post/$postId`} params={{ postId: postId }}>{postId}</Link>
             </li>
           );
         })
