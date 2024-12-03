@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: Cascadia Mono;
-  src: url('src/assets/fonts/CascadiaMono.ttf')
+  src: url('src/assets/fonts/CascadiaCode.woff2')
 }
 
 @layer base {
