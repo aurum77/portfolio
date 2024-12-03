@@ -37,13 +37,9 @@ func main() {
 
 		dir, err := os.ReadDir(md_path)
 
-		for _, post := range dir {
-			posts = append(posts, post.Name())
+		for i := len(dir) - 1; i >= 0; i-- {
+			posts = append(posts, dir[i].Name())
 		}
-
-		// for i := len(dirs) - 1; i >= 0; i-- {
-		// 	posts = append(posts, dirs[i].Name())
-		// }
 
 		if err != nil {
 			fmt.Println(err)
