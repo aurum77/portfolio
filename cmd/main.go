@@ -79,9 +79,13 @@ func main() {
 	})
 
 	// Serve static files
-	app.Static("/", "./dist")
+	app.Static("/", "./dist", fiber.Static{
+		Compress: true,
+	})
 	// Catch all route
-	app.Static("*", "./dist/index.html")
+	app.Static("*", "./dist/index.html", fiber.Static{
+		Compress: true,
+	})
 
 	app.Listen(":8080")
 }
