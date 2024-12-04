@@ -8,6 +8,7 @@ import (
 	"portfolio/util"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
@@ -21,6 +22,8 @@ func main() {
 	app.Use(cors.New(cors.Config{
 		AllowOrigins: "*",
 	}))
+
+	app.Use(compress.New())
 
 	app.Get("/api/blog/", func(c *fiber.Ctx) error {
 		posts := []string{}
