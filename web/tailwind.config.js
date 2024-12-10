@@ -4,13 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        'gruvbox-base': '#282828',
-        'gruvbox-fg': '#ebdbb2',
-        'gruvbox-yellow': '#fabd2f',
-        'gruvbox-blue': '#83a598',
-        'gruvbox-purple': '#d3869b',
-        'gruvbox-aqua': '#8ec07c'
-      }
+        "gruvbox-aqua": "#8ec07c",
+        "gruvbox-base": "#282828",
+        "gruvbox-base1": "#3c3836",
+        "gruvbox-blue": "#83a598",
+        "gruvbox-fg": "#ebdbb2",
+        "gruvbox-green": "#b8bb26",
+        "gruvbox-orange": "#fe8019",
+        "gruvbox-purple": "#d3869b",
+        "gruvbox-red": "#fb4934",
+        "gruvbox-yellow": "#fabd2f",
+      },
     },
   },
   plugins: [],
