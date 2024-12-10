@@ -22,6 +22,7 @@ function Post() {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: sanitized }}
+      id="post"
       className="flex flex-col items-start max-w-3xl w-full break-words p-4"
     ></div>
   )
