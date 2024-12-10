@@ -4,20 +4,21 @@
 
 @font-face {
   font-family: Cascadia Mono;
-  src: url('src/assets/fonts/CascadiaCode.woff2')
+  src: url("src/assets/fonts/CascadiaCode.woff2");
 }
 
 @layer base {
+  /* Base styles */
   html {
     font-family: Cascadia Mono;
   }
 
   h1 {
-    @apply text-4xl font-bold text-gruvbox-blue mb-2 mt-4;
+    @apply text-4xl font-bold text-gruvbox-yellow mb-2 mt-4;
   }
 
   h2 {
-    @apply text-3xl font-bold text-gruvbox-purple mb-2 mt-4;
+    @apply text-3xl font-bold text-gruvbox-green mb-2 mt-4;
   }
 
   h3 {
@@ -26,5 +27,28 @@
 
   p {
     @apply text-gruvbox-fg;
+  }
+
+  hr {
+    @apply w-full text-gruvbox-base1 mt-4;
+  }
+
+  strong {
+    @apply font-bold text-gruvbox-yellow;
+  }
+
+  em {
+    @apply italic text-gruvbox-orange;
+  }
+
+  /* Blog post page styles */
+  #post {
+    ol > li {
+      @apply mt-4;
+    }
+
+    ul {
+      @apply list-disc list-inside;
+    }
   }
 }
