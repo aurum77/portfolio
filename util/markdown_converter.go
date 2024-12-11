@@ -7,7 +7,7 @@ import (
 )
 
 func MarkdownToHTML(md []byte) []byte {
-	extensions := parser.CommonExtensions | parser.AutoHeadingIDs | parser.NoEmptyLineBeforeBlock
+	extensions := parser.CommonExtensions
 	p := parser.NewWithExtensions(extensions)
 	doc := p.Parse(md)
 
