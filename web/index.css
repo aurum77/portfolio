@@ -44,7 +44,11 @@
   /* Blog post page styles */
   #post {
     ol > li {
-      @apply mt-4;
+      @apply mt-4 list-decimal list-inside;
+    }
+
+    li p {
+      @apply inline;
     }
 
     ul {
