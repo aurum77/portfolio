@@ -14,11 +14,11 @@
   }
 
   h1 {
-    @apply text-4xl font-bold text-gruvbox-yellow mb-2 mt-4;
+    @apply text-4xl font-bold text-gruvbox-blue mb-2 mt-4;
   }
 
   h2 {
-    @apply text-3xl font-bold text-gruvbox-green mb-2 mt-4;
+    @apply text-3xl font-bold text-gruvbox-yellow mb-2 mt-4;
   }
 
   h3 {
@@ -34,11 +34,11 @@
   }
 
   strong {
-    @apply font-bold text-gruvbox-yellow;
+    @apply font-bold text-gruvbox-orange;
   }
 
   em {
-    @apply italic text-gruvbox-orange;
+    @apply italic text-gruvbox-yellow;
   }
 
   /* Blog post page styles */
