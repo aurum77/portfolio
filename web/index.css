@@ -51,6 +51,10 @@
       @apply inline;
     }
 
+    li::marker {
+      @apply font-bold text-gruvbox-yellow;
+    }
+
     ul {
       @apply list-disc list-inside;
     }
