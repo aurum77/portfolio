@@ -6,7 +6,7 @@ RUN go build -o portfolio cmd/main.go
 FROM node:22-alpine AS react_build
 COPY ./web /web
 WORKDIR /web
-RUN npm install --omit dev
+RUN npm install
 RUN npm run build
 
 FROM alpine:3.20.3 AS final
