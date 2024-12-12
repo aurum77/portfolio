@@ -58,14 +58,14 @@ func main() {
 
 		if err != nil {
 			fmt.Println(err)
-			return err
+			return fiber.NewError(fiber.StatusInternalServerError, "failed to get working directory")
 		}
 
 		unescaped_filename, err := url.QueryUnescape(c.Params("postId"))
 
 		if err != nil {
 			fmt.Println(err)
-			return err
+			return fiber.NewError(fiber.StatusInternalServerError, "failed to escape post id")
 		}
 
 		sanitized_path := path.Clean(path.Join(cwd, "markdown", unescaped_filename))
@@ -73,7 +73,7 @@ func main() {
 		data, err := os.ReadFile(sanitized_path)
 
 		if err != nil {
-			return fiber.NewError(fiber.StatusNotFound, "File not found")
+			return fiber.NewError(fiber.StatusNotFound)
 		}
 
 		html := util.MarkdownToHTML(data)
