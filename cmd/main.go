@@ -33,20 +33,20 @@ func main() {
 
 		if err != nil {
 			fmt.Println(err)
-			return err
+			return fiber.NewError(fiber.StatusInternalServerError, "failed to get working directory")
 		}
 
 		md_path := path.Join(cwd, "/markdown")
 
 		dir, err := os.ReadDir(md_path)
 
-		for i := len(dir) - 1; i >= 0; i-- {
-			posts = append(posts, dir[i].Name())
-		}
-
 		if err != nil {
 			fmt.Println(err)
-			return err
+			return fiber.NewError(fiber.StatusInternalServerError, "failed to read directory")
+		}
+
+		for i := len(dir) - 1; i >= 0; i-- {
+			posts = append(posts, dir[i].Name())
 		}
 
 		return c.JSON(posts)
