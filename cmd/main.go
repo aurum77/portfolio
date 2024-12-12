@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/tls"
 	"fmt"
 	"net/url"
 	"os"
@@ -10,10 +11,24 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
+	"golang.org/x/crypto/acme/autocert"
 )
 
 func main() {
 	app := fiber.New()
+
+	manager := &autocert.Manager{
+		Prompt:     autocert.AcceptTOS,
+		HostPolicy: autocert.HostWhitelist("replaceme.com"),
+		Cache:      autocert.DirCache("./certs"),
+	}
+
+	cfg := &tls.Config{
+		GetCertificate: manager.GetCertificate,
+		NextProtos: []string{
+			"http/1.1", "acme-tls/1",
+		},
+	}
 
 	app.Use(cors.New(cors.Config{
 		AllowOrigins: "http://localhost:5173",
@@ -90,5 +105,11 @@ func main() {
 		Compress: true,
 	})
 
-	app.Listen(":8080")
+	ln, err := tls.Listen("tcp", ":443", cfg)
+
+	if err != nil {
+		panic(err)
+	}
+
+	app.Listener(ln)
 }
