@@ -14,6 +14,8 @@ FROM alpine:3.20.3 AS final
 COPY --from=go_build /app/portfolio /app/portfolio
 # The folder to read markdown files from
 COPY --from=go_build /app/markdown /app/markdown
+# The folder to read image files from
+COPY --from=go_build /app/images /app/images
 # The web page assets
 COPY --from=react_build /dist /app/dist
 
