@@ -5,6 +5,8 @@ _emphasized_
 **_strong and emphasized_**
 <br>
 
+![a torty cat, looking rather happy](/images/kedy.jpg "Kurabiye")
+
 # Introduction to The End of Evangelion
 
 ## Introduction to The End of Evangelion

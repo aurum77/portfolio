@@ -89,6 +89,12 @@ func main() {
 	app.Static("/", "./dist", fiber.Static{
 		Compress: true,
 	})
+
+	// Serve image files
+	app.Static("/images", "./images", fiber.Static{
+		Compress: true,
+	})
+
 	// Catch all route
 	app.Static("*", "./dist/index.html", fiber.Static{
 		Compress: true,
