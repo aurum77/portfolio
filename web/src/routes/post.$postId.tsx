@@ -1,10 +1,10 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import DOMPurify from "dompurify";
-import { BACKEND_URI } from "../config";
 
 export const Route = createFileRoute("/post/$postId")({
   loader: async ({ params: { postId } }) => {
-    const res = await fetch(`${BACKEND_URI}/api/blog/${postId}`);
+    const URI = import.meta.env.ENV_URI;
+    const res = await fetch(`${URI}/api/blog/${postId}`);
 
     if (res.status == 404) {
       throw notFound();
