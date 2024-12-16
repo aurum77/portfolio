@@ -1,22 +1,25 @@
 package main
 
 import (
-	"crypto/tls"
 	"fmt"
 	"net/url"
 	"os"
 	"path"
 	"portfolio/util"
-	"strings"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
-	"golang.org/x/crypto/acme/autocert"
 )
 
 func main() {
+	err := godotenv.Load()
+
+	if err != nil {
+		panic(err)
+	}
+
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
@@ -100,58 +103,12 @@ func main() {
 		Compress: true,
 	})
 
-	err := godotenv.Load(".env")
+  // The backend uri has to be in the domain.com:4949 or 185.124.32.12:6969 format
+	uri := os.Getenv("URI")
+
+	err = app.Listen(uri)
 
 	if err != nil {
 		panic(err)
-	}
-
-	uri := os.Getenv("URI")
-
-	// if no URI is provided default to 8080 and http
-	if uri == "" {
-		uri = "127.0.0.1:8080"
-		err := app.Listen(uri)
-
-		if err != nil {
-			panic(err)
-		}
-	}
-
-	// if URI has http:
-	if strings.Contains(uri, "http:") {
-		addr := strings.Split(uri, "http://")[1]
-
-		err := app.Listen(addr)
-
-		if err != nil {
-			panic(err)
-		}
-	}
-
-	// if URI has https:
-	if strings.Contains(uri, "https:") {
-		addr := strings.Split(uri, "https://")[1]
-
-		manager := &autocert.Manager{
-			Prompt:     autocert.AcceptTOS,
-			HostPolicy: autocert.HostWhitelist(addr),
-			Cache:      autocert.DirCache("./certs"),
-		}
-
-		cfg := &tls.Config{
-			GetCertificate: manager.GetCertificate,
-			NextProtos: []string{
-				"http/1.1", "acme-tls/1",
-			},
-		}
-
-		ln, err := tls.Listen("tcp", ":443", cfg)
-
-		if err != nil {
-			panic(err)
-		}
-
-		app.Listener(ln)
 	}
 }
