@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 
 export const Route = createFileRoute("/post/$postId")({
   loader: async ({ params: { postId } }) => {
-    const URI = import.meta.env.ENV_URI;
+    const URI = import.meta.env.VITE_BACKEND_URI;
     const res = await fetch(`${URI}/api/blog/${postId}`);
 
     if (res.status == 404) {

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/blog")({
   loader: async () => {
-    const URI = import.meta.env.ENV_URI;
+    const URI = import.meta.env.VITE_BACKEND_URI;
     const res = await fetch(`${URI}/api/blog`);
     if (!res.ok) throw new Error("failed to fetch");
 
