@@ -32,3 +32,6 @@ dist/
 
 # air config file
 .air.toml
+
+# fiber compressed files
+*.fiber.gz
