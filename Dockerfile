@@ -16,6 +16,8 @@ COPY --from=go_build /app/portfolio /app/portfolio
 COPY --from=go_build /app/markdown /app/markdown
 # The folder to read image files from
 COPY --from=go_build /app/images /app/images
+# The .env file
+COPY --from=go_build /app/.env /app/.env
 # The web page assets
 COPY --from=react_build /dist /app/dist
 
