@@ -5,13 +5,31 @@
 - DOMPurify to sanitize the HTML
 - path.Clean to clear the path input against path traversal exploits.
 
+# How to develop further ?
+
+1. air to hot reload the backend
+
+```bash
+air
+```
+
+2. nodemon to rebuild the frontend when its edited
+
+```bash
+npm run dev
+```
+
 # How to deploy ?
 
 - use docker:
 
 ```bash
 docker build -t portfolio .
-docker run -p 80:8080 -p 8080:8080 -v ./markdown:/app/markdown/ portfolio
+# preferably save it and send it to your vps
+docker run -p 8090:8090 -v ./markdown:/app/markdown/ -v ./images:/app/images/ portfolio
+# preferably add ssl and route it to 443 through some reverse proxy
+# ?????
+# profit
 ```
 
 # TODO
