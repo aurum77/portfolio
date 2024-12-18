@@ -11,16 +11,22 @@ export const Route = createRootRoute({
                 className="font-bold text-gruvbox-yellow hover:underline underline-offset-4"
                 to="/"
               >
-                Name Surname
+                Kurabiye
               </Link>
               <ul className="flex gap-6 ml-auto">
                 <li>
-                  <Link className="hover:underline underline-offset-4" to="/blog">
+                  <Link
+                    className="hover:underline underline-offset-4"
+                    to="/blog"
+                  >
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:underline underline-offset-4" to="/projects">
+                  <Link
+                    className="hover:underline underline-offset-4"
+                    to="/projects"
+                  >
                     Projects
                   </Link>
                 </li>
@@ -31,5 +37,5 @@ export const Route = createRootRoute({
         </div>
       );
     }
-  }
+  },
 });
