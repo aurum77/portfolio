@@ -41,8 +41,9 @@
     @apply italic text-gruvbox-yellow;
   }
 
-  /* Blog post page styles */
-  #post {
+  /* Blog post and About page styles */
+  #post,
+  #about {
     ol > li {
       @apply mt-4 list-decimal list-inside;
     }
