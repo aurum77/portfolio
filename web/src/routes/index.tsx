@@ -47,7 +47,7 @@ function Index() {
         <div className="flex flex-row items-start justify-between">
           <div className="mb-0">
             <h2 className="mt-0 mb-0">Litterbox Engineering</h2>
-            <strong>Jr. Fullstack DevCat</strong>
+            <strong>Developer Cattern</strong>
           </div>
           <p>Nov 2022 - Jul 2023</p>
         </div>
