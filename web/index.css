@@ -14,36 +14,41 @@
   }
 
   h1 {
-    @apply text-xl font-bold text-gruvbox-blue mb-2 mt-4;
+    @apply text-xl font-bold text-gruvbox-blue dark:text-gruvbox-dark-blue mb-2 mt-4;
   }
 
   h2 {
-    @apply text-lg font-bold text-gruvbox-yellow mb-2 mt-4;
+    @apply text-lg font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow mb-2 mt-4;
   }
 
   h3 {
-    @apply text-base font-bold text-gruvbox-aqua mb-2 mt-4;
+    @apply text-base font-bold text-gruvbox-aqua dark:text-gruvbox-dark-aqua mb-2 mt-4;
   }
 
   p {
-    @apply text-gruvbox-fg;
+    @apply text-gruvbox-fg dark:text-gruvbox-dark-fg;
   }
 
   hr {
-    @apply w-full text-gruvbox-base1 mt-4;
+    @apply w-full text-gruvbox-base1 dark:text-gruvbox-dark-base1 mt-4;
   }
 
   strong {
-    @apply font-bold text-gruvbox-orange;
+    @apply font-bold text-gruvbox-orange dark:text-gruvbox-dark-orange;
   }
 
   em {
-    @apply italic text-gruvbox-yellow;
+    @apply italic text-gruvbox-yellow dark:text-gruvbox-dark-yellow;
+  }
+
+  p {
+    @apply text-gruvbox-fg dark:text-gruvbox-dark-fg;
   }
 
   /* Blog post and About page styles */
   #post,
-  #about {
+  #about,
+  #blog {
     ol > li {
       @apply mt-4 list-decimal list-inside;
     }
@@ -53,11 +58,19 @@
     }
 
     li::marker {
-      @apply font-bold text-gruvbox-yellow;
+      @apply font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow;
     }
 
     ul {
-      @apply list-disc list-inside;
+      @apply list-disc list-outside text-gruvbox-fg dark:text-gruvbox-dark-fg;
+    }
+
+    li > a {
+      @apply underline-offset-4 text-gruvbox-blue dark:text-gruvbox-dark-blue;
+    }
+
+    li > a:hover {
+      @apply underline;
     }
   }
 }

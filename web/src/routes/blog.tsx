@@ -11,7 +11,8 @@ export const Route = createFileRoute("/blog")({
     const data = Route.useLoaderData() as string[];
 
     return (
-      <ul className="flex flex-col items-start max-w-3xl w-full break-words p-4 gap-2">
+      <ul id="blog" className="flex flex-col items-start max-w-3xl w-full break-words p-4 gap-2">
+        <h2 className="mb-0">Posts</h2>
         {data.length == 0 ? (
           <h1>no blog posts, yet</h1>
         ) : (
