@@ -3,14 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Cascadia Mono;
-  src: url("src/assets/fonts/CascadiaCode-opt.woff2");
+  font-family: Noto Sans Mono;
+  font-weight: normal;
+  src: url("src/assets/fonts//noto-sans-mono-v30-latin-regular.woff2");
+}
+
+@font-face {
+  font-family: Noto Sans Mono;
+  font-weight: bold;
+  src: url("src/assets/fonts/noto-sans-mono-v30-latin-700.woff2");
 }
 
 @layer base {
   /* Base styles */
   html {
-    font-family: Cascadia Mono;
+    font-family: Noto Sans Mono;
   }
 
   h1 {
