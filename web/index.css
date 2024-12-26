@@ -5,13 +5,13 @@
 @font-face {
   font-family: Noto Sans Mono;
   font-weight: normal;
-  src: url("src/assets/fonts//noto-sans-mono-v30-latin-regular.woff2");
+  src: url("src/assets/fonts/noto-sans-mono-v30-latin_latin-ext-regular.woff2");
 }
 
 @font-face {
   font-family: Noto Sans Mono;
   font-weight: bold;
-  src: url("src/assets/fonts/noto-sans-mono-v30-latin-700.woff2");
+  src: url("src/assets/fonts/noto-sans-mono-v30-latin_latin-ext-700.woff2");
 }
 
 @layer base {
