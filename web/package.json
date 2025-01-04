@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --watch src -e tsx,ts --exec npm run build",
+    "dev": "npx vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -28,7 +28,6 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
-    "nodemon": "^3.1.9",
     "postcss": "^8.4.49",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.16.0"
