@@ -21,19 +21,19 @@
   }
 
   h1 {
-    @apply text-xl font-bold text-gruvbox-blue dark:text-gruvbox-dark-blue mb-2 mt-4;
+    @apply text-xl font-bold text-gruvbox-blue dark:text-gruvbox-dark-blue mt-4;
   }
 
   h2 {
-    @apply text-lg font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow mb-2 mt-4;
+    @apply text-lg font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow mt-4;
   }
 
   h3 {
-    @apply text-base font-bold text-gruvbox-aqua dark:text-gruvbox-dark-aqua mb-2 mt-4;
+    @apply text-base font-bold text-gruvbox-aqua dark:text-gruvbox-dark-aqua mt-4;
   }
 
   p {
-    @apply text-gruvbox-fg dark:text-gruvbox-dark-fg;
+    @apply text-gruvbox-fg dark:text-gruvbox-dark-fg mt-4;
   }
 
   hr {
@@ -63,13 +63,12 @@
     li p {
       @apply inline;
     }
-
     li::marker {
       @apply font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow;
     }
 
     ul {
-      @apply list-disc list-outside text-gruvbox-fg dark:text-gruvbox-dark-fg;
+      @apply list-disc list-inside text-gruvbox-fg dark:text-gruvbox-dark-fg;
     }
 
     li > a {
