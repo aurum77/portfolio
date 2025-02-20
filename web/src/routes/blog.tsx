@@ -12,23 +12,25 @@ export const Route = createFileRoute("/blog")({
 
     return (
       <ul id="blog" className="flex flex-col items-start max-w-3xl w-full break-words p-4 gap-2">
-        <h2 className="mb-0">Posts</h2>
+        <h1 className="mb-0">Posts</h1>
         {data.length == 0 ? (
           <h1>no blog posts, yet</h1>
         ) : (
-          data.map((postId) => {
-            return (
-              <li>
-                <Link
-                  key={postId}
-                  to={`/post/$postId`}
-                  params={{ postId: postId }}
-                >
-                  {postId}
-                </Link>
-              </li>
-            );
-          })
+          <ul>
+            {data.map((postId) => {
+              return (
+                <li>
+                  <Link
+                    key={postId}
+                    to={`/post/$postId`}
+                    params={{ postId: postId }}
+                  >
+                    {postId}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         )}
       </ul>
     );

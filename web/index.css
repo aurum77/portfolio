@@ -3,79 +3,91 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Noto Sans Mono;
+  font-family: Noto Sans;
   font-weight: normal;
-  src: url("src/assets/fonts/noto-sans-mono-v30-latin_latin-ext-regular.woff2");
+  src: url("src/assets/fonts/noto-sans-v38-latin_latin-ext-regular.woff2");
 }
 
 @font-face {
-  font-family: Noto Sans Mono;
+  font-family: Noto Sans;
   font-weight: bold;
-  src: url("src/assets/fonts/noto-sans-mono-v30-latin_latin-ext-700.woff2");
+  src: url("src/assets/fonts/noto-sans-v38-latin_latin-ext-700.woff2");
+}
+
+@font-face {
+  font-family: Noto Serif;
+  font-weight: bold;
+  src: url("src/assets/fonts/noto-serif-v23-latin_latin-ext-700.woff2f");
 }
 
 @layer base {
   /* Base styles */
   html {
-    font-family: Noto Sans Mono;
+    font-family: Noto Sans;
+    overflow: scroll;
   }
 
   h1 {
-    @apply text-xl font-bold text-gruvbox-blue dark:text-gruvbox-dark-blue mt-4;
+    @apply font-serif text-xl font-bold mt-4;
   }
 
   h2 {
-    @apply text-lg font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow mt-4;
+    @apply text-lg font-bold mt-4;
   }
 
   h3 {
-    @apply text-base font-bold text-gruvbox-aqua dark:text-gruvbox-dark-aqua mt-4;
+    @apply text-base font-bold mt-4;
   }
 
   p {
-    @apply text-gruvbox-fg dark:text-gruvbox-dark-fg mt-4;
+    @apply mt-4;
   }
 
   hr {
-    @apply w-full text-gruvbox-base1 dark:text-gruvbox-dark-base1 mt-4;
+    @apply w-full mt-4;
   }
 
   strong {
-    @apply font-bold text-gruvbox-orange dark:text-gruvbox-dark-orange;
+    @apply font-bold;
   }
 
   em {
-    @apply italic text-gruvbox-yellow dark:text-gruvbox-dark-yellow;
+    @apply italic;
   }
 
   p {
-    @apply text-gruvbox-fg dark:text-gruvbox-dark-fg;
+    @apply mt-0;
+  }
+
+  img {
+    @apply m-0 p-0;
   }
 
   /* Blog post and About page styles */
   #post,
   #about,
   #blog {
-    ol > li {
+    ol>li {
       @apply mt-4 list-decimal list-inside;
     }
 
     li p {
       @apply inline;
     }
+
     li::marker {
-      @apply font-bold text-gruvbox-yellow dark:text-gruvbox-dark-yellow;
+      @apply font-bold;
     }
 
     ul {
-      @apply list-disc list-inside text-gruvbox-fg dark:text-gruvbox-dark-fg;
+      @apply list-disc list-inside;
     }
 
-    li > a {
-      @apply underline-offset-4 text-gruvbox-blue dark:text-gruvbox-dark-blue;
+    li>a {
+      @apply underline-offset-4;
     }
 
-    li > a:hover {
+    li>a:hover {
       @apply underline;
     }
   }
