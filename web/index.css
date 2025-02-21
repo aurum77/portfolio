@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Noto Sans;
+  font-family: 'Noto Sans', 'sans-serif';
   font-weight: normal;
   src: url("src/assets/fonts/noto-sans-v38-latin_latin-ext-regular.woff2");
 }
 
 @font-face {
-  font-family: Noto Sans;
+  font-family: 'Noto Sans', 'sans-serif';
   font-weight: bold;
   src: url("src/assets/fonts/noto-sans-v38-latin_latin-ext-700.woff2");
 }
 
 @font-face {
-  font-family: Noto Serif;
+  font-family: 'Noto Serif', serif;
   font-weight: bold;
   src: url("src/assets/fonts/noto-serif-v23-latin_latin-ext-700.woff2f");
 }

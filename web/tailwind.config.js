@@ -6,6 +6,10 @@ export default {
     colors: {
       "theme-bg": "#202020",
       "theme-text": "#ffffff",
+    },
+    fontFamily: {
+      sans: ["Noto Sans", "sans-serif"],
+      serif: ["Noto Serif", "serif"]
     }
   }
 };
